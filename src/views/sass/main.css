@@ -54,7 +54,30 @@ table {
   border-spacing: 0;
 }
 
-.small-bold, .recipe {
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.small-bold, .recipe, nav > * {
   font-size: 16px;
   font-weight: bold;
 }
@@ -69,19 +92,31 @@ table {
   font-weight: bold;
 }
 
-.normal-bold {
+.normal-bold, .brewing-method, .view-info {
   font-size: 24px;
   font-weight: bold;
 }
 
-.small-bold, .recipe,
+.small-bold, .recipe, nav > *,
 .medium-medium,
 .medium-bold,
-.normal-bold {
+.normal-bold,
+.brewing-method,
+.view-info {
   font-family: "Poppins", sans-serif;
 }
 
-.hover:hover, .recipe:hover, .bi-gear-fill:hover, .bi-plus-circle-fill:hover, .brewing-method:hover {
+.view {
+  height: 100vh;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.hover:hover, nav > :hover, .recipe:hover, .brewing-method:hover {
   cursor: pointer;
 }
 
@@ -96,13 +131,36 @@ table {
 }
 
 .list, .recipe-list, .brewing-methods-list {
-  margin-top: 100px;
-  height: calc(100vh - 200px);
   overflow: scroll;
 }
 
+.bi-plus-circle-fill {
+  font-size: 50px;
+  color: #2e2c2c;
+  margin: 45px 0;
+  margin-top: auto;
+}
+.bi-plus-circle-fill:hover {
+  cursor: pointer;
+}
+
 .brewing-method {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
+}
+
+.brewing-methods-list {
+  margin-bottom: 70px;
+}
+
+.view-info {
+  margin-bottom: 35px;
+  width: 100%;
+  text-align: center;
+  color: hsl(202, 84%, 57%);
 }
 
 body {
@@ -138,17 +196,13 @@ body {
 }
 
 .bi-gear-fill {
-  position: absolute;
-  top: 40px;
-  right: 25px;
-  transform: translate(0, 0);
-  color: #2e2c2c;
+  margin-left: auto;
 }
 
-.bi-plus-circle-fill {
-  position: absolute;
-  bottom: 50px;
-  transform: translate(0, 0);
-  font-size: 50px;
-  color: #2e2c2c;
+nav {
+  width: 90%;
+  margin: 40px 0 35px 0;
+  display: flex;
+  justify-content: space-between;
+  color: hsl(0, 0%, 30%);
 }/*# sourceMappingURL=main.css.map */

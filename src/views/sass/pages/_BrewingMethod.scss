@@ -1,14 +1,27 @@
 @use "../modules/" as *;
 @use "../variables/" as *;
+@use "../base/" as *;
+@use "../tools/" as *;
 
 .brewing-method {
     @extend .tile;
     @extend .hover;
-    margin-bottom: $recipe-margin;
+    @extend .normal-bold;
+    @include flex(center, center);
+    margin-bottom: $tile-bottom-margin;
 }
 
 .brewing-methods-list {
     @extend .list;
+    margin-bottom: 70px;
+}
+
+.view-info {
+    @extend .normal-bold;
+    margin-bottom: 35px;
+    width: 100%;
+    text-align: center;
+    color: $blue;
 }
 
 

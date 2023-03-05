@@ -1,0 +1,9 @@
+@use "../tools/" as *;
+
+.view {
+    height: 100vh;
+    width: 100%;
+    max-width: 600px;
+    @include flex(null, center, column);
+    position: relative;
+}

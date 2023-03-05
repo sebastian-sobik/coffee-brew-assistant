@@ -1,0 +1,16 @@
+@use "../variables/colors" as *;
+@use "../modules/" as *;
+@use "../base/" as *;
+
+nav {
+    width: 90%;
+    margin: 40px 0 35px 0;
+    display: flex;
+    justify-content: space-between;
+    color: $text-grey
+}
+
+nav > * {
+    @extend .small-bold;
+    @extend .hover;
+}
