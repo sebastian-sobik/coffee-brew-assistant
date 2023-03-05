@@ -1,0 +1,14 @@
+@use "../modules/" as *;
+@use "../variables/" as *;
+
+.brewing-method {
+    @extend .tile;
+    @extend .hover;
+    margin-bottom: $recipe-margin;
+}
+
+.brewing-methods-list {
+    @extend .list;
+}
+
+

@@ -1,0 +1,60 @@
+@use "../tools/" as *;
+@use "../modules/" as *;
+@use "../base/typography" as *;
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+
+$recipe-margin: 30px;
+$icons-clr: #2e2c2c;
+
+body {
+    @include flex(null, center, column);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.recipe-list {
+    @extend .list;
+}
+
+.recipe {
+    @extend .tile;
+    @extend .hover;
+    @extend .small-bold;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: $recipe-margin;
+}
+
+.recipe-info {
+    display: flex;
+    gap: 25px;
+
+    .coffee {
+        @include flex(center, null, row);
+    }
+}
+
+.brew-type-icon {
+    width: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bi-gear-fill {
+    @extend .hover;
+    @include absolute(40px, 25px);
+    color: $icons-clr;
+}
+
+.bi-plus-circle-fill {
+    @extend .hover;
+    @include absolute(null, null, 50px);
+    font-size: 50px;
+    color: $icons-clr;
+}

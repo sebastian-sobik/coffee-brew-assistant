@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.small-bold, .recipe {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.medium-medium {
+  font-size: 20px;
+  font-weight: medium;
+}
+
+.medium-bold {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.normal-bold {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.small-bold, .recipe,
+.medium-medium,
+.medium-bold,
+.normal-bold {
+  font-family: "Poppins", sans-serif;
+}
+
+.hover:hover, .recipe:hover, .bi-gear-fill:hover, .bi-plus-circle-fill:hover, .brewing-method:hover {
+  cursor: pointer;
+}
+
+.tile, .recipe, .brewing-method {
+  box-sizing: border-box;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 310px;
+  height: 80px;
+  color: #ffffff;
+  background-color: #2e2c2c;
+}
+
+.list, .recipe-list, .brewing-methods-list {
+  margin-top: 100px;
+  height: calc(100vh - 200px);
+  overflow: scroll;
+}
+
+.brewing-method {
+  margin-bottom: 30px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.recipe-info {
+  display: flex;
+  gap: 25px;
+}
+.recipe-info .coffee {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.brew-type-icon {
+  width: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bi-gear-fill {
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  transform: translate(0, 0);
+  color: #2e2c2c;
+}
+
+.bi-plus-circle-fill {
+  position: absolute;
+  bottom: 50px;
+  transform: translate(0, 0);
+  font-size: 50px;
+  color: #2e2c2c;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,13 @@
+@use "../variables/variables" as *;
+
+.tile {
+    box-sizing: border-box;
+    padding: 10px 10px;
+    border-radius: 5px;
+
+    width: $tile-width;
+    height: $tile-heigth;
+
+    color: $tile-font-clr;
+    background-color: $tile-bg-clr;
+}
