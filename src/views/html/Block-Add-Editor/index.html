@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block add editor</title>
+    <link rel="stylesheet" href="../../sass/main.css">
+</head>
+<body>
+
+    <nav>
+        <button id="cancel">
+            Cancel
+        </button>
+    </nav>
+
+    <div class="info rel-top">
+        <span class="info__time">Time : <span class="time">40</span>s</span>
+        <span class="info__weight">Weight : <span class="weight">120</span>g</span>
+    </div>
+
+    <main>
+
+        <!-- Zamienić to <li> -->
+        <li class="step-list__step">
+
+            <div class="step-icon">
+                <i class="bi bi-droplet"></i>
+            </div>
+
+            <div class="step-name">
+                Add water
+            </div>
+
+            <div class="step-info">
+                <span class="step-info-time">0:00</span>
+                <span class="step-info-weight">0g</span>
+            </div>
+
+        </li>
+
+        <textarea class="description-input" spellcheck="false" placeholder="This should be filled with default description of a class."></textarea>
+
+        <div class="picker time-input">
+            <button class="add">
+                <i class="bi bi-plus"></i>
+            </button>
+
+            <div class="time">
+                <span class="time-value">0:00</span>
+            </div>
+
+            <button class="sub">
+                <i class="bi bi-dash"></i>
+            </button>
+        </div>
+
+        <div class="picker weight-input">
+            <button class="add">
+                <i class="bi bi-plus"></i>
+            </button>
+
+            <div class="weight">
+                <span class="weight-value">0</span>g
+            </div>
+
+            <button class="sub">
+                <i class="bi bi-dash"></i>
+            </button>
+        </div>
+
+
+    </main>
+
+    <div class="bottom">
+        <button class="btn-arrow">
+            <i class="bi bi-arrow-right-short"></i>
+        </button>
+    </div>
+
+</body>
+</html>

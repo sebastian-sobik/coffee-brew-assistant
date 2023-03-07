@@ -1,16 +1,17 @@
 @use "../variables/" as *;
 @use "../tools/" as *;
+@use "../modules/tile-size" as *;
+@use "../modules/tile-shadow" as *;
 
 @mixin tile {
+    @include tile-size;
+    @include tile-shadow;
+
     box-sizing: border-box;
     padding: 10px 10px;
     border-radius: 5px;
 
-    width: $tile-width;
-    height: $tile-heigth;
-
     color: $tile-font-clr;
     background-color: $tile-bg-clr;
 
-    @include shadow;
 }

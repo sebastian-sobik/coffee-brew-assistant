@@ -1,6 +1,13 @@
 @use "../variables/" as *;
 @use "../base/" as *;
 
+ol,ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 ol {
     counter-reset: index;
 
@@ -8,8 +15,6 @@ ol {
         position: relative;
     }
 }
-
-
 
 ol li::before {
     counter-increment: index;

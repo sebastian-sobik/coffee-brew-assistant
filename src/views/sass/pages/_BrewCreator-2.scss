@@ -1,16 +1,24 @@
 @use "../modules/" as *;
 @use "../base/typography" as *;
 @use "../variables/" as *;
+@use "../base/" as *;
 
 .flex-equal {
-    justify-content: space-between;
     height: 100%;
     margin-top: 100px;
-    margin-bottom: 250px;
+
+    & > * {
+        margin-bottom: 30px;
+    }
 }
 
-.icon .bi {
-    font-size: 100px;
+.icon-header {
+    display: flex;
+    justify-content: center;
+
+    .bi {
+        font-size: 100px;
+    }
 }
 
 .input {
@@ -27,10 +35,13 @@
     }
 
     input {
+        all: unset;
         width: 100%;
         @include tile;
         @include medium-medium;
         text-align: center;
         height: $tile-heigth;
     }
+
 }
+

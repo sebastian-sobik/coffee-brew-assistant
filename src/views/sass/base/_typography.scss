@@ -11,6 +11,12 @@ $font-family-default: 'Poppins', sans-serif;
     font-family: $font-family-default;
 }
 
+@mixin petit-medium {
+    font-size : $font-size-petit;
+    font-weight: medium;
+    font-family: $font-family-default;
+}
+
 @mixin small-bold {
     font-size : $font-size-small;
     font-weight: bold;

@@ -1,0 +1,7 @@
+@use "../variables/" as *;
+
+@mixin tile-size {
+    max-width: $tile-width;
+    width: 100%;
+    height: $tile-heigth;
+}

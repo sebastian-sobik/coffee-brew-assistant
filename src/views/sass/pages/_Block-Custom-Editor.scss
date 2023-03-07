@@ -1,0 +1,66 @@
+@use "../variables/" as *;
+@use "../modules/" as *;
+@use "../base/typography" as *;
+@use "../tools/" as *;
+
+.custom-tile {
+    background-color: $custom-tile-grey;
+}
+
+.title-input,
+.icon-input,
+.options-input {
+    max-width: $tile-width;
+    width: 100%;
+    background-color: $picker-main-clr;
+    color: white;
+    border-radius: 5px;
+    @include medium-bold;
+    margin-bottom: 20px;
+}
+
+.options-input {
+    @include petit-bold;
+    padding: 15px;
+    height: 75px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-input {
+    height: 60px;
+    border: none;
+    text-align: center;
+}
+
+
+.icon-input {
+    height: 80px;
+    @include flex(center, center, row);
+    padding: 0 10px;
+
+    .icon {
+        height: 100%;
+        font-size : 35px;
+        margin-right: 10px;
+
+        &--selected {
+            color: $gold;
+        }
+
+        &:hover {
+            color: $blue;
+            cursor: pointer;
+        }
+    }
+
+
+    .list {
+        max-width: $tile-width;
+        display: inline-block;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+}

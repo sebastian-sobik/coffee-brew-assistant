@@ -1,0 +1,16 @@
+@use "../variables/" as *;
+
+@mixin placeholder-white{
+    &::placeholder{
+        color: $placeholder-text-clr;
+    }
+    &::-webkit-input-placeholder{
+        color: $placeholder-text-clr;
+    }
+    &:-moz-placeholder{
+        color: $placeholder-text-clr;
+    }
+    &::-ms-placeholder {
+        color: $placeholder-text-clr;
+    }
+}
