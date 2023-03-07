@@ -4,20 +4,19 @@
 @use "../tools/" as *;
 
 .brewing-method {
-    @extend .tile;
+    @include tile;
     @extend .hover;
-    @extend .normal-bold;
+    @include normal-bold;
     @include flex(center, center);
     margin-bottom: $tile-bottom-margin;
 }
 
 .brewing-methods-list {
     @extend .list;
-    margin-bottom: 70px;
 }
 
 .view-info {
-    @extend .normal-bold;
+    @include normal-bold;
     margin-bottom: 35px;
     width: 100%;
     text-align: center;

@@ -77,74 +77,100 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-.small-bold, .recipe, nav > * {
-  font-size: 16px;
-  font-weight: bold;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.medium-medium {
-  font-size: 20px;
-  font-weight: medium;
+html, .view, body {
+  height: 100%;
 }
 
-.medium-bold {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.normal-bold, .brewing-method, .view-info {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.small-bold, .recipe, nav > *,
-.medium-medium,
-.medium-bold,
-.normal-bold,
-.brewing-method,
-.view-info {
-  font-family: "Poppins", sans-serif;
-}
-
-.view {
-  height: 100vh;
+.bottom {
   width: 100%;
-  max-width: 600px;
+  margin-bottom: 40px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+main {
+  overflow: scroll;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  margin-bottom: 40px;
 }
 
-.hover:hover, nav > :hover, .recipe:hover, .brewing-method:hover {
+.hover:hover, .recipe:hover, .brewing-method:hover, nav > :hover {
   cursor: pointer;
 }
 
-.tile, .recipe, .brewing-method {
-  box-sizing: border-box;
-  padding: 10px 10px;
-  border-radius: 5px;
-  width: 310px;
-  height: 80px;
-  color: #ffffff;
-  background-color: #2e2c2c;
-}
-
-.list, .recipe-list, .brewing-methods-list {
+.list, .brewing-methods-list {
   overflow: scroll;
 }
 
 .bi-plus-circle-fill {
   font-size: 50px;
-  color: #2e2c2c;
-  margin: 45px 0;
-  margin-top: auto;
+  color: hsl(0, 2%, 18%);
 }
 .bi-plus-circle-fill:hover {
   cursor: pointer;
 }
 
+ol {
+  counter-reset: index;
+}
+ol li {
+  position: relative;
+}
+
+ol li::before {
+  counter-increment: index;
+  content: counter(index);
+  position: absolute;
+  left: -20px;
+  color: hsl(0, 0%, 42%);
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  width: 90%;
+  margin: 40px 0 35px 0;
+  display: flex;
+  justify-content: space-between;
+  color: hsl(0, 0%, 30%);
+}
+
+nav > * {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.view {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .brewing-method {
+  box-sizing: border-box;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 310px;
+  height: 80px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 2%, 18%);
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -152,11 +178,10 @@ button::-moz-focus-inner {
   margin-bottom: 30px;
 }
 
-.brewing-methods-list {
-  margin-bottom: 70px;
-}
-
 .view-info {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 35px;
   width: 100%;
   text-align: center;
@@ -167,12 +192,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
   margin: 0;
   padding: 0;
 }
 
 .recipe {
+  box-sizing: border-box;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 310px;
+  height: 80px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 2%, 18%);
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -199,10 +233,53 @@ body {
   margin-left: auto;
 }
 
-nav {
-  width: 90%;
-  margin: 40px 0 35px 0;
+.step-list__step {
+  box-sizing: border-box;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 310px;
+  height: 80px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 2%, 18%);
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  color: hsl(0, 0%, 30%);
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+.step-list__step .step-icon .bi {
+  font-size: 40px;
+}
+.step-list__step .step-name {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+.step-list__step .step-info {
+  line-height: 180%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.rel-top {
+  position: relative;
+  top: -30px;
+}
+
+.info {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.info > * {
+  line-height: 200%;
+  text-align: center;
+  color: hsl(202, 84%, 57%);
 }/*# sourceMappingURL=main.css.map */

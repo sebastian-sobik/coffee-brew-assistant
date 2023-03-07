@@ -1,0 +1,23 @@
+@use "../variables/" as *;
+@use "../base/" as *;
+
+ol {
+    counter-reset: index;
+
+    li {
+        position: relative;
+    }
+}
+
+
+
+ol li::before {
+    counter-increment: index;
+    content: counter(index);
+
+    position: absolute;
+    left: -20px;
+
+    color: $index-clr;
+    @include small-bold;
+}

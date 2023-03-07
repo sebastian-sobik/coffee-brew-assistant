@@ -7,19 +7,14 @@
 
 body {
     @include flex(null, center, column);
-    height: 100vh;
     margin: 0;
     padding: 0;
 }
 
-.recipe-list {
-    @extend .list;
-}
-
 .recipe {
-    @extend .tile;
     @extend .hover;
-    @extend .small-bold;
+    @include tile;
+    @include small-bold;
 
     display: flex;
     flex-direction: column;

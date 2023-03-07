@@ -4,32 +4,37 @@
 
 $font-family-default: 'Poppins', sans-serif;
 
-.small-bold {
-    font-size : $font-size-small;
+
+@mixin petit-bold {
+    font-size : $font-size-petit;
     font-weight: bold;
-}
-
-.medium-medium {
-    font-size : $font-size-medium;
-    font-weight: medium;
-}
-
-.medium-bold {
-    font-size : $font-size-medium;
-    font-weight: bold;
-}
-
-.normal-bold {
-    font-size : $font-size-normal;
-    font-weight: bold;
-}
-
-.small-bold,
-.medium-medium,
-.medium-bold,
-.normal-bold {
     font-family: $font-family-default;
 }
+
+@mixin small-bold {
+    font-size : $font-size-small;
+    font-weight: bold;
+    font-family: $font-family-default;
+}
+
+@mixin medium-medium {
+    font-size : $font-size-medium;
+    font-weight: medium;
+    font-family: $font-family-default;
+}
+
+@mixin medium-bold {
+    font-size : $font-size-medium;
+    font-weight: bold;
+    font-family: $font-family-default;
+}
+
+@mixin normal-bold {
+    font-size : $font-size-normal;
+    font-weight: bold;
+    font-family: $font-family-default;
+}
+
 
 
 

@@ -1,6 +1,6 @@
-@use "../variables/variables" as *;
+@use "../variables/" as *;
 
-.tile {
+@mixin tile {
     box-sizing: border-box;
     padding: 10px 10px;
     border-radius: 5px;

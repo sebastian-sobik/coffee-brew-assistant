@@ -1,0 +1,14 @@
+@use "../base/typography" as *;
+@use "../variables/" as *;
+
+.info {
+    @include petit-bold;
+    display:flex;
+    flex-direction: column;
+
+    & > * {
+        line-height: 200%;
+        text-align: center;
+        color: $blue;
+    }
+}

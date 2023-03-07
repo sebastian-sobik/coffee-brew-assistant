@@ -11,6 +11,6 @@ nav {
 }
 
 nav > * {
-    @extend .small-bold;
+    @include small-bold;
     @extend .hover;
 }

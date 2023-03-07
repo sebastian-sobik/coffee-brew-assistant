@@ -1,0 +1,30 @@
+@use "../modules/" as *;
+@use "../tools/" as *;
+@use "../base/typography" as *;
+@use "../variables/" as *;
+
+.step-list__step {
+    @include tile;
+    @include flex(space-between, center);
+    margin-bottom: $tile-bottom-margin;
+    padding: 0 20px;
+
+    .step-icon .bi{
+        font-size: 40px;
+    }
+
+    .step-name {
+        @include normal-bold;
+    }
+
+    .step-info {
+        line-height: 180%;
+        @include flex(null, center, column);
+        @include small-bold;
+    }
+
+}
+
+.rel-top {
+    @include RelativeTop(-30px);
+}
