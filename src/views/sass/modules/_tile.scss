@@ -1,4 +1,5 @@
 @use "../variables/" as *;
+@use "../tools/" as *;
 
 @mixin tile {
     box-sizing: border-box;
@@ -10,4 +11,6 @@
 
     color: $tile-font-clr;
     background-color: $tile-bg-clr;
+
+    @include shadow;
 }

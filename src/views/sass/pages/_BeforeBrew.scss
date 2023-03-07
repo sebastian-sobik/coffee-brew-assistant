@@ -1,0 +1,24 @@
+@use "../variables/colors" as *;
+@use "../modules/" as *;
+
+.btn-play {
+
+    @extend .hover;
+    width: 60px;
+    background-color: $tile-bg-clr;
+    border-radius: 100%;
+
+
+    .bi-play {
+        position: relative;
+
+        color: white;
+        font-size: 50px;
+
+        &::before {
+            position: relative;
+            right:-2px;
+        }
+    }
+
+}

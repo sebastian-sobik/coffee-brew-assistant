@@ -1,0 +1,36 @@
+@use "../modules/" as *;
+@use "../base/typography" as *;
+@use "../variables/" as *;
+
+.flex-equal {
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 100px;
+    margin-bottom: 250px;
+}
+
+.icon .bi {
+    font-size: 100px;
+}
+
+.input {
+
+    label {
+        display:block;
+        width: 100%;
+
+        color: $blue;
+        @include normal-bold;
+        text-align: center;
+
+        margin-bottom: 15px;
+    }
+
+    input {
+        width: 100%;
+        @include tile;
+        @include medium-medium;
+        text-align: center;
+        height: $tile-heigth;
+    }
+}

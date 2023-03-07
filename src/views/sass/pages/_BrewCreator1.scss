@@ -4,6 +4,7 @@
 @use "../variables/" as *;
 
 .step-list__step {
+    @extend .hover;
     @include tile;
     @include flex(space-between, center);
     margin-bottom: $tile-bottom-margin;
