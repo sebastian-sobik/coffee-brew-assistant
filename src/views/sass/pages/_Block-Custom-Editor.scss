@@ -9,23 +9,24 @@
 
 .title-input,
 .icon-input,
-.options-input {
+.options-input,
+.description-input {
     max-width: $tile-width;
     width: 100%;
     background-color: $picker-main-clr;
-    color: white;
     border-radius: 5px;
-    @include medium-bold;
+    padding: 15px;
+
     margin-bottom: 20px;
+
+    color: white;
+    @include medium-bold;
 }
 
 .options-input {
-    @include petit-bold;
-    padding: 15px;
     height: 75px;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include petit-bold;
+    @include flex(space-between, null, column);
 }
 
 .title-input {
@@ -34,16 +35,16 @@
     text-align: center;
 }
 
+.description-input {
+    @include petit-medium;
+}
+
 
 .icon-input {
     height: 80px;
-    @include flex(center, center, row);
-    padding: 0 10px;
 
     .icon {
-        height: 100%;
         font-size : 35px;
-        margin-right: 10px;
 
         &--selected {
             color: $gold;
@@ -57,9 +58,10 @@
 
 
     .list {
-        max-width: $tile-width;
-        display: inline-block;
-        white-space: nowrap;
+        @include flex(null, center, row);
+        gap: 15px;
+
+        height: 100%;
         overflow-x: scroll;
         overflow-y: hidden;
     }

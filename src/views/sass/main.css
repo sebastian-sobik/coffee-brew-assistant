@@ -165,6 +165,31 @@ nav > * {
   align-items: center;
 }
 
+.info {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.info > * {
+  line-height: 200%;
+  text-align: center;
+  color: hsl(202, 84%, 57%);
+}
+
+.btn-arrow {
+  width: 100%;
+  max-width: 270px;
+  height: 70px;
+  border-radius: 1.3rem;
+  background-color: hsl(0, 2%, 18%);
+}
+.btn-arrow .bi {
+  color: white;
+  font-size: 40px;
+}
+
 .brewing-method {
   max-width: 310px;
   width: 100%;
@@ -452,24 +477,25 @@ body {
 
 .title-input,
 .icon-input,
-.options-input {
+.options-input,
+.description-input {
   max-width: 310px;
   width: 100%;
   background-color: #868484;
-  color: white;
   border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  color: white;
   font-size: 20px;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 20px;
 }
 
 .options-input {
+  height: 75px;
   font-size: 12px;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
-  padding: 15px;
-  height: 75px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -481,18 +507,17 @@ body {
   text-align: center;
 }
 
+.description-input {
+  font-size: 12px;
+  font-weight: medium;
+  font-family: "Poppins", sans-serif;
+}
+
 .icon-input {
   height: 80px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
 }
 .icon-input .icon {
-  height: 100%;
   font-size: 35px;
-  margin-right: 10px;
 }
 .icon-input .icon--selected {
   color: hsl(43, 100%, 51%);
@@ -502,34 +527,11 @@ body {
   cursor: pointer;
 }
 .icon-input .list {
-  max-width: 310px;
-  display: inline-block;
-  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
-}
-
-.info {
-  font-size: 12px;
-  font-weight: bold;
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  flex-direction: column;
-}
-.info > * {
-  line-height: 200%;
-  text-align: center;
-  color: hsl(202, 84%, 57%);
-}
-
-.btn-arrow {
-  width: 100%;
-  max-width: 270px;
-  height: 70px;
-  border-radius: 1.3rem;
-  background-color: hsl(0, 2%, 18%);
-}
-.btn-arrow .bi {
-  color: white;
-  font-size: 40px;
 }/*# sourceMappingURL=main.css.map */
