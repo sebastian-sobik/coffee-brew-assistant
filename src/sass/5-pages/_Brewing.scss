@@ -1,0 +1,81 @@
+@use "../0-abstract/" as *;
+
+.next-step-info {
+    position: fixed;
+    top: 80px;
+    @include flex(null, center, row);
+    gap: 15px;
+    color: $clr-icons-fill;
+
+    i {
+        font-size: $icon-size-brewing-aside;
+    }
+
+    .info-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        text-align: center;
+        font-size: $font-size-brewing-aside;
+        font-weight: $font-weight-semi-bold;
+    }
+}
+
+.heightFix {
+    height: 100vh;
+    @include flex(center, center, row);
+}
+
+.main-info {
+    @include flex(center, null, column);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.current-step-info {
+    text-align: center;
+    color: $clr-icons-fill;
+
+
+    .step-icon {
+        font-size: $icon-size-brewing-header-icon;
+    }
+
+    .step-title {
+        font-size: $font-size-brewing-header-title;
+        font-weight: $font-weight-semi-bold;
+        margin-top: 10px;
+    }
+
+    .step-time {
+        font-size: $font-size-brewing-time;
+        font-weight: $font-weight-bold;
+        letter-spacing: 4px;
+
+        &--blue {
+            color: $light-blue;
+        }
+
+        &--orange {
+            color: $orange;
+        }
+
+        &--red {
+            color: $red;
+        }
+    }
+
+    .step-weight {
+        font-size: $font-size-brewing-weight;
+        font-weight : $font-weight-bold;
+        letter-spacing: 2px;
+    }
+
+    .step-description {
+        color: $dimmed-grey;
+        font-size: $font-size-brewing-description;
+        width: 30ch;
+        line-height: 150%;
+    }
+}
