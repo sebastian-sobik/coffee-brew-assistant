@@ -1,0 +1,7 @@
+@use "../0-abstract/" as *;
+
+.bottom {
+    @include flex(center, null);
+    width: 100%;
+    margin: auto 0 40px 0;
+}

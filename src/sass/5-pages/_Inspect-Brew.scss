@@ -1,0 +1,15 @@
+@use "../0-abstract/" as *;
+
+.btn-play {
+    width: $icon-size-step*1.5;
+    font-size: $icon-size-play*1.5;
+    border-radius: 100%;
+    background-color: $clr-icons-fill;
+
+    //Centering icon
+    .bi-play {
+        color: white;
+        position: relative;
+        right: -2px;
+    }
+}

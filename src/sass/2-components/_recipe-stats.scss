@@ -1,0 +1,16 @@
+@use "../0-abstract/" as *;
+
+.recipe-stats {
+    position: relative;
+    top: -30px;
+
+    font-size: $font-size-petit;
+    font-weight: $font-weight-bold;
+    color: $clr-blue;
+    text-align: center;
+    line-height: 200%;
+
+    .time, .weight {
+        display: block;
+    }
+}

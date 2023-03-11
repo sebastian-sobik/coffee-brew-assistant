@@ -1,0 +1,7 @@
+@use "../2-components/step" as *;
+@use "../0-abstract/" as *;
+
+.step {
+    @include step-default;
+}
+

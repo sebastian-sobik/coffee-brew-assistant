@@ -1,0 +1,6 @@
+@use "../0-abstract/" as *;
+
+body {
+	height: 100%;
+    @include flex(center, null, row);
+}

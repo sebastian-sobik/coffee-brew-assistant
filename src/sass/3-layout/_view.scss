@@ -1,0 +1,10 @@
+@use "../0-abstract/" as *;
+
+.view {
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    position: relative;
+    @include flex(null, center, column);
+}

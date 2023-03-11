@@ -1,0 +1,18 @@
+@use "../0-abstract/" as *;
+@use "../2-components/step" as *;
+
+.class-list-element,
+.class-list-custom {
+    @include step-default(class);
+    @include flex(center, center, row);
+}
+
+.class-icon {
+    position: absolute;
+    left: 20px;
+}
+
+
+.class-list-custom {
+    background-color: $clr-custom-tile-background;
+}

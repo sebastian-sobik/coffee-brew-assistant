@@ -1,0 +1,609 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+html {
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+html {
+  font-family: "Poppins", "sans-serif";
+}
+
+h2 {
+  color: hsl(202, 84%, 57%);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h1, h2, h3, h4 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+label {
+  color: hsl(202, 84%, 57%);
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+}
+
+.bi {
+  color: inherit;
+}
+.bottom .bi {
+  color: hsl(0, 2%, 18%);
+}
+nav .bi {
+  color: hsl(0, 2%, 18%);
+  font-size: 16px;
+}
+
+ol {
+  counter-reset: index;
+}
+ol li {
+  position: relative;
+}
+
+ol li::before {
+  counter-increment: index;
+  content: counter(index);
+  position: absolute;
+  left: -20px;
+  color: hsl(0, 0%, 42%);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  border: none;
+}
+input::-moz-selection, textarea::-moz-selection {
+  outline: none;
+  border: 2px solid hsl(202, 84%, 57%);
+}
+input:hover, input::selection, input:active, input:focus,
+textarea:hover,
+textarea::selection,
+textarea:active,
+textarea:focus {
+  outline: none;
+  border: 2px solid hsl(202, 84%, 57%);
+}
+
+.btn-circle {
+  font-size: 50px;
+}
+
+.btn-arrow {
+  max-width: 270px;
+  width: 100%;
+  height: 70px;
+  border-radius: 1.3rem;
+  background-color: hsl(0, 2%, 20%);
+}
+.btn-arrow .bi-arrow-right-short {
+  color: white;
+  font-size: 40px;
+}
+
+.bi-sunrise {
+  font-size: 100px;
+  color: hsl(0, 2%, 18%);
+}
+
+button {
+  font-weight: 700;
+}
+
+.recipe-stats {
+  position: relative;
+  top: -30px;
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(202, 84%, 57%);
+  text-align: center;
+  line-height: 200%;
+}
+.recipe-stats .time, .recipe-stats .weight {
+  display: block;
+}
+
+.view {
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: scroll;
+  margin-bottom: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 40px 0 35px 0;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: auto 0 40px 0;
+}
+
+.selector {
+  display: flex;
+  max-width: 310px;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 30px;
+  border-radius: 2rem;
+  background-color: hsl(0, 2%, 20%);
+}
+.selector .add, .selector .sub {
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: #e7e7e7;
+  font-size: 25px;
+}
+.selector .selector-value {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+  flex-shrink: 1;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.custom-step {
+  position: relative;
+  overflow: hidden;
+  width: 310px;
+  height: 85px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: hsl(0, 2%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  min-height: 85px;
+  background-color: hsl(0, 1%, 70%);
+}
+.custom-step:hover {
+  cursor: pointer;
+}
+.custom-step .custom-step-icon {
+  font-size: 40px;
+}
+.custom-step .custom-step-name {
+  font-size: 24px;
+  padding: 0 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.custom-step .custom-step-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  line-height: 180%;
+}
+
+.title-input,
+.options-input,
+.description-input,
+.icon-input {
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+  width: 310px;
+  height: 85px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: hsl(0, 2%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  margin-bottom: 20px;
+}
+.title-input:hover,
+.options-input:hover,
+.description-input:hover,
+.icon-input:hover {
+  cursor: pointer;
+}
+
+.title-input {
+  height: 65px;
+  text-align: center;
+}
+
+.options-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+.options-input label[for=doNotCountTime],
+.options-input label[for=includeWeight] {
+  font-size: inherit;
+  color: white;
+}
+
+.icon-input .list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.icon-input .icon {
+  font-size: 35px;
+}
+.icon-input .icon--selected {
+  color: hsl(43, 100%, 51%);
+}
+.icon-input .icon:hover {
+  color: hsl(202, 84%, 57%);
+  cursor: pointer;
+}
+
+.btn-play {
+  width: 60px;
+  font-size: 37.5px;
+  border-radius: 100%;
+  background-color: hsl(0, 2%, 18%);
+}
+.btn-play .bi-play {
+  color: white;
+  position: relative;
+  right: -2px;
+}
+
+.class-list-element,
+.class-list-custom {
+  position: relative;
+  overflow: hidden;
+  width: 310px;
+  height: 85px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: hsl(0, 2%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.class-list-element:hover,
+.class-list-custom:hover {
+  cursor: pointer;
+}
+.class-list-element .class-icon,
+.class-list-custom .class-icon {
+  font-size: 40px;
+}
+.class-list-element .class-name,
+.class-list-custom .class-name {
+  font-size: 24px;
+  padding: 0 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.class-list-element .class-info,
+.class-list-custom .class-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  line-height: 180%;
+}
+
+.class-icon {
+  position: absolute;
+  left: 20px;
+}
+
+.class-list-custom {
+  background-color: hsl(0, 1%, 70%);
+}
+
+.view-info {
+  overflow: visible;
+  margin-bottom: 20px;
+}
+
+.brewing-method {
+  position: relative;
+  overflow: hidden;
+  width: 310px;
+  height: 85px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: hsl(0, 2%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+.brewing-method:hover {
+  cursor: pointer;
+}
+
+.icon-header {
+  margin: 90px 0 30px 0;
+}
+
+.input-box .input-label h3 {
+  margin-bottom: 15px;
+}
+.input-box .input-source {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 310px;
+  height: 85px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: hsl(0, 2%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  font-size: 16px;
+}
+.input-box .input-source:hover {
+  cursor: pointer;
+}
+
+.coffee, .coffee span,
+.time,
+.score {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.recipe {
+  position: relative;
+  overflow: hidden;
+  width: 310px;
+  height: 85px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: hsl(0, 2%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.recipe:hover {
+  cursor: pointer;
+}
+.recipe .recipe-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
+.recipe .recipe-info i {
+  margin-right: 5px;
+}
+.recipe .recipe-info .coffee {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.recipe .recipe-info .coffee .icon-brew-method {
+  flex-shrink: 0;
+}
+.recipe .recipe-info .time,
+.recipe .recipe-info .score {
+  flex-shrink: 0;
+}
+.recipe .recipe-title {
+  overflow: visible;
+}
+
+.icon-brew-method {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+}
+
+#btn-gear {
+  margin-left: auto;
+}
+
+.step {
+  position: relative;
+  overflow: hidden;
+  width: 310px;
+  height: 85px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: hsl(0, 2%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: -1px 9px 9px -6px rgba(0, 0, 0, 0.29);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+}
+.step:hover {
+  cursor: pointer;
+}
+.step .step-icon {
+  font-size: 40px;
+}
+.step .step-name {
+  font-size: 24px;
+  padding: 0 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.step .step-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  line-height: 180%;
+}/*# sourceMappingURL=styles.css.map */

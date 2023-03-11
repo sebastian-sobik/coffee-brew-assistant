@@ -1,0 +1,55 @@
+@use "../0-abstract/" as *;
+@use "../2-components/" as *;
+
+.custom-step {
+    @include step-default(custom-step);
+    min-height: $tile-heigth;
+    background-color: $clr-custom-tile-background;
+}
+
+.title-input,
+.options-input,
+.description-input,
+.icon-input {
+    font-size: $font-size-small;
+    @include tile-default;
+    margin-bottom: $form-input-margin;
+}
+
+.title-input {
+    height: 65px;
+    text-align: center;
+}
+
+.options-input {
+    label[for="doNotCountTime"],
+    label[for="includeWeight"] {
+        font-size: inherit;
+        color: white;
+    }
+    @include flex(space-between, null, column);
+    padding: 15px 10px
+}
+
+.icon-input {
+    .list {
+        @include flex(null, center, row);
+        gap: 15px;
+        height: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .icon {
+        font-size : 35px;
+
+        &--selected {
+            color: $gold;
+        }
+
+        &:hover {
+            color: $clr-blue;
+            cursor: pointer;
+        }
+    }
+}

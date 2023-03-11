@@ -1,0 +1,14 @@
+@use "../0-abstract/" as *;
+@use "../2-components/tile" as *;
+
+.view-info {
+    overflow: visible;
+    margin-bottom: 20px;
+}
+
+.brewing-method {
+    @include tile-default;
+    @include flex(center, center, row);
+    font-size: $font-size-big;
+    font-weight: $font-weight-bold;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block custom editor</title>
+    <link rel="stylesheet" href="../../sass/styles.css">
+</head>
+<body>
+
+    <div class="view">
+        <nav>
+            <button id="btn-cancel">
+                Cancel
+            </button>
+        </nav>
+
+        <div class="custom-step">
+
+            <div class="custom-step-icon">
+                <i class="bi bi-question-lg"></i>
+            </div>
+
+            <div class="custom-step-name">
+                custom
+            </div>
+
+            <div class="custom-step-info">
+                <span class="custom-step-info-time">0:00</span>
+                <span class="custom-step-info-weight">0g</span>
+            </div>
+
+        </div>
+
+        <main>
+
+            <form autocomplete="off" action="#">
+
+                <input type="text" class="title-input" name="title" placeholder="custom">
+
+                <div class="options-input">
+                    <p>
+                        <input type="checkbox" name="doNotCountTime" id="doNotCountTime">
+                        <label for="doNotCountTime">do not add time to result</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="includeWeight" id="includeWeight">
+                        <label for="includeWeight">include weight</label>
+                    </p>
+                </div>
+
+                <div class="icon-input">
+
+                    <ul class="list">
+
+                        <li class="icon icon--selected">
+                            <i class="bi bi-question-lg"></i>
+                        </li>
+                        <li class="icon">
+                            <i class="bi bi-droplet"></i>
+                        </li>
+                        <li class="icon">
+                            <i class="bi bi-chevron-double-down"></i>
+                        </li>
+                        <li class="icon">
+                            <i class="bi bi-arrow-clockwise"></i>
+                        </li>
+                        <li class="icon ">
+                            <i class="bi bi-alarm"></i>
+                        </li>
+                        <li class="icon">
+                            <i class="bi bi-fire"></i>
+                        </li>
+                        <li class="icon">
+                            <i class="bi bi-flower3"></i>
+                        </li>
+                        <li class="icon">
+                            <i class="bi bi-rocket-takeoff"></i>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <textarea class="description-input" spellcheck="false" name="description" placeholder="Add class description"></textarea>
+
+
+
+            </form>
+
+        </main>
+
+        <div class="bottom">
+            <button class="btn-arrow" id="btn-continue">
+                <i class="bi bi-arrow-right-short"></i>
+            </button>
+        </div>
+    </div>
+
+
+</body>
+</html>

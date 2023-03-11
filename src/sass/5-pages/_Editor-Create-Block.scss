@@ -1,0 +1,30 @@
+@use "../0-abstract/" as *;
+
+.selector {
+    display: flex;
+    max-width: $tile-width;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 30px;
+    border-radius: 2rem;
+
+    background-color: $clr-selector-bg;
+
+    .add, .sub {
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        background-color: $clr-selector-btn-bg;
+        font-size : $icon-size-play;
+    }
+
+    .selector-value {
+        @include flex(center, center, row);
+        flex-grow: 2;
+        flex-shrink: 1;
+
+        color: white;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-big;
+    }
+}

@@ -1,0 +1,50 @@
+@use "../0-abstract/" as *;
+@use "../2-components/tile" as *;
+
+
+.coffee, .coffee span,
+.time,
+.score {
+    @include elipsis;
+}
+
+.recipe {
+    @include tile-default;
+    @include flex(space-between, null, column);
+
+    .recipe-info {
+        @include flex(null, center, row);
+        gap: 25px;
+
+        // Icons margin
+        i {
+            margin-right: 5px;
+        }
+
+        .coffee {
+            @include flex(null, center, row);
+            .icon-brew-method {
+                flex-shrink: 0;
+            }
+        }
+
+        .time,
+        .score {
+            flex-shrink: 0;
+        }
+    }
+
+    .recipe-title {
+        overflow: visible;
+    }
+}
+
+.icon-brew-method {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+}
+
+#btn-gear {
+    margin-left: auto;
+}

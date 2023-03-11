@@ -1,0 +1,6 @@
+@use "../0-abstract/" as *;
+
+.bi-sunrise {
+    font-size: $icon-size-sun;
+    color: $clr-icons-fill;
+}

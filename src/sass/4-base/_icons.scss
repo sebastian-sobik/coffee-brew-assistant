@@ -1,0 +1,13 @@
+@use "../0-abstract/" as *;
+.bi {
+    color: inherit;
+
+    .bottom & {
+        color: $clr-icons-fill;
+    }
+
+    nav & {
+        color: $clr-icons-fill;
+        font-size : $font-size-small;
+    }
+}

@@ -1,0 +1,4 @@
+@use "../0-abstract/" as *;
+html {
+    font-family: $font-family-default;
+}

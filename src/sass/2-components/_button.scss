@@ -1,0 +1,4 @@
+@use "../0-abstract/" as *;
+button {
+    font-weight: $font-weight-bold;
+}

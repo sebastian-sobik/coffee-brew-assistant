@@ -1,0 +1,14 @@
+@use "../0-abstract/" as *;
+
+.btn-arrow {
+    max-width: 270px;
+    width: 100%;
+    height: 70px;
+    border-radius: 1.3rem;
+    background-color: $clr-tile-background;
+
+    .bi-arrow-right-short {
+        color: white;
+        font-size: $icon-size-step;
+    }
+}

@@ -1,0 +1,8 @@
+@use "../0-abstract/" as *;
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 40px 0 35px 0;
+}

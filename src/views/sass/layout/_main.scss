@@ -1,8 +1,0 @@
-@use "../tools/" as *;
-
-main {
-    overflow: scroll;
-    width: 100%;
-    @include flex(null, center, column);
-    margin-bottom: 40px;;
-}

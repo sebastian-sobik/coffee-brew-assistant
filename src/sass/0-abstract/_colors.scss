@@ -1,0 +1,36 @@
+// Colors
+$dark   : hsl(0, 0%, 12%);
+$gold   : hsl(43, 100%, 51%);
+$red    : hsl(0, 76%, 62%);
+$orange : hsl(43, 88%, 59%);
+$light-blue   : hsl(202, 84%, 57%);
+$dimmed-grey : hsl(0, 0%, 30%);
+
+// Typography
+$clr-navbar-button       : $dimmed-grey;
+$clr-blue                : $light-blue;
+
+// Counter
+$clr-counter-font-blue   : $light-blue;
+$clr-counter-font-orange : $orange;
+$clr-counter-font-red    : $red;
+
+// <?>
+$clr-final-header        : $dark;
+$clr-final-star          : $gold;
+
+// Tile
+$clr-tile-font : hsl(0, 0%, 100%);
+$clr-tile-background : hsl(0, 2%, 20%);
+$clr-custom-tile-background : hsl(0, 1%, 70%);
+
+// Icons :
+$clr-icons-fill : hsl(0, 2%, 18%);
+
+// List element index
+$clr-recipe-index : hsl(0, 0%, 42%);
+
+// Forms :
+$clr-placeholder-text : #e6e6e6;
+$clr-selector-bg     : $clr-tile-background;
+$clr-selector-btn-bg : #e7e7e7;

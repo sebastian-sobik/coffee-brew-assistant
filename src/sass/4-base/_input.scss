@@ -1,0 +1,15 @@
+@use "../0-abstract/" as *;
+
+
+input,
+textarea {
+    border: none;
+
+    &:hover,
+    &::selection,
+    &:active,
+    &:focus {
+        outline: none;
+        border: 2px solid $clr-blue;
+    }
+}

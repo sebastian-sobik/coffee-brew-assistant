@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewCreator1</title>
+    <link rel="stylesheet" href="../../sass/styles.css">
+</head>
+<body>
+    <div class="view">
+        <nav>
+            <button id="btn-cancel">Cancel</button>
+            <button id="btn-finish">Finish</button>
+        </nav>
+
+        <aside class="recipe-stats">
+            <span class="time">Time : <span id="time-value">1:40</span>s</span>
+            <span class="weight">Weight : <span id="weight-value">200</span>g</span>
+        </aside>
+
+        <main>
+            <!-- Step list -->
+            <ol class="step-list">
+
+                <!-- Step -->
+                <li class="step">
+
+                    <span class="step-icon">
+                        <i class="bi bi-thermometer-half"></i>
+                    </span>
+
+                    <span class="step-name">
+                        Heat up
+                    </span>
+
+                    <span class="step-info">
+                        <span class="step-info-time">0:20</span>
+                    </span>
+
+                </li>
+
+                <!-- Step -->
+                <li class="step">
+
+                    <span class="step-icon">
+                        <i class="bi bi-suit-spade"></i>
+                    </span>
+
+                    <span class="step-name">
+                        Add coffee
+                    </span>
+
+                    <span class="step-info">
+                        <span class="step-info-time">0:10</span>
+                        <span class="step-info-weight">20g</span>
+                    </span>
+
+                </li>
+
+                <!-- Step -->
+                <li class="step">
+
+                    <span class="step-icon">
+                        <i class="bi bi-droplet"></i>
+                    </span>
+
+                    <span class="step-name">
+                        Add water
+                    </span>
+
+                    <span class="step-info">
+                        <span class="step-info-time">0:10</span>
+                        <span class="step-info-weight">180g</span>
+                    </span>
+
+                </li>
+
+                <!-- Step -->
+                <li class="step">
+
+                    <span class="step-icon">
+                        <i class="bi bi-clock"></i>
+                    </span>
+
+                    <span class="step-name">
+                        Wait
+                    </span>
+
+                    <span class="step-info">
+                        <span class="step-info-time">1:00</span>
+                    </span>
+
+                </li>
+
+                <!-- Step -->
+                <li class="step">
+
+                    <span class="step-icon">
+                        <i class="bi bi-chevron-double-down"></i>
+                    </span>
+
+                    <span class="step-name">
+                        Press
+                    </span>
+
+                    <span class="step-info">
+                        <span class="step-info-time">0:30</span>
+                    </span>
+
+                </li>
+
+            </ol>
+        </main>
+
+        <div class="bottom">
+            <button class="btn-circle" id="btn-add-step">
+                <i class="bi bi-plus-circle-fill"></i>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

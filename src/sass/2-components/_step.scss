@@ -1,0 +1,26 @@
+@use "../0-abstract/" as *;
+@use "./tile" as *;
+
+@mixin step-default($child-name : step) {
+    @include tile-default;
+    @include flex(space-between, center, row);
+    padding: 0 20px;
+    position: relative;
+
+    .#{$child-name}-icon {
+        font-size: $icon-size-step;
+    }
+
+    .#{$child-name}-name {
+        font-size: $font-size-big;
+        padding: 0 10px;
+        @include elipsis;
+    }
+
+    .#{$child-name}-info {
+        @include flex(null, center, column);
+        font-size: $font-size-small;
+        line-height: 180%;
+    }
+}
+

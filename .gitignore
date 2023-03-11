@@ -1,5 +1,8 @@
+# Design dependencies
 node_modules
 
+# Desing
 design
 
+# Sass maps
 *.map

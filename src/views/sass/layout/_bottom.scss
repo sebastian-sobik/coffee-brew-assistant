@@ -1,9 +1,0 @@
-@use "../tools/" as *;
-
-.bottom {
-    width: 100%;
-    margin-bottom: 40px;
-    margin-top: auto;
-    padding: 0 5%;
-    @include flex(center, null);
-}

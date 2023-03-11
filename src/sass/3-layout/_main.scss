@@ -1,0 +1,8 @@
+@use "../0-abstract/" as *;
+
+main {
+    @include flex(null, center, column);
+    width: 100%;
+    overflow: scroll;
+    margin-bottom: 30px;
+}

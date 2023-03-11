@@ -1,0 +1,23 @@
+@use "../0-abstract/" as *;
+
+@mixin tile-default {
+    position: relative;
+    overflow: hidden;
+    width: $tile-width;
+    height: $tile-heigth;
+    padding: $tile-padding;
+    border-radius: $tile-border-radius;
+    margin-bottom: $tile-bottom-margin;
+    background-color: $clr-tile-background;
+
+    color: $clr-tile-font;
+    font-weight: $font-weight-bold;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    box-shadow: -1px 9px 9px -6px rgba(0,0,0,0.29);
+    -webkit-box-shadow: -1px 9px 9px -6px rgba(0,0,0,0.29);
+    -moz-box-shadow: -1px 9px 9px -6px rgba(0,0,0,0.29);
+}
